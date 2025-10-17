@@ -1,0 +1,36 @@
+ss
+git init
+
+
+git add app.js style.css
+
+
+git commit -m "Initial commit with app.js and style.css"
+
+
+git checkout -b feature-login
+
+git add app.js
+git commit -m "Add login feature scaffold to app.js"
+
+git checkout main
+
+git add style.css
+git commit -m "Update styling in style.css"
+
+git merge feature-login
+
+# (Edit conflicted files to resolve conflicts)
+git add <conflicted-files>
+git commit
+
+git diff
+git diff --staged
+git diff main feature-login
+
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git checkout -- <filename>
+git reset HEAD <filename>
+
+git tag v1.0
